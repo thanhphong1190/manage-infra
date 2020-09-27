@@ -1,0 +1,21 @@
+.react-bootstrap-table {
+  &.sticky-last-column {
+    .table > tbody > tr > td:last-child,
+    .table > thead > tr:last-child > th:last-child {
+      background-color: #F3F3F3;
+      position: sticky;
+      position: -webkit-sticky;
+      right: -1px;
+      z-index: 1;
+    }
+  }
+  thead > tr > th {
+    outline: none;
+  }
+}
+
+.react-bootstrap-table-pagination {
+  .pagination {
+    justify-content: flex-end;
+  }
+}

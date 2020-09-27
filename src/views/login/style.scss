@@ -1,0 +1,32 @@
+@import "../../styles/variables";
+
+.LoginContainer {
+    height: 100%;
+    .LoginContent {
+        width: 40%;
+        @media only screen and (max-width: 1024px) {
+            width: 50%;
+        }
+        @media only screen and (max-width: 768px) {
+            width: 90%;
+        }  
+          
+        .LoginHeader {
+            padding: 20px;
+            background-color: $main-color;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            h6 {
+                text-transform: uppercase;
+                color: #ffffff;
+            }
+        }
+        .LoginForm {
+            padding: 30px;
+            border: 1px solid #cccccc;
+            .LoginFormSubmit {
+                margin-top: 30px;
+            }
+        }
+    }
+}
