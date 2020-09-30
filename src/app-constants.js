@@ -38,7 +38,7 @@ export const SIDE_BAR = [
     id: "manage-contract",
     key: "manage-contract",
     icon: "fa fa-files-o",
-    text: "Quản lý hợp đồng"
+    text: "Quản lý hợp đồng",
   },
   {
     id: "manage-partner",
@@ -50,13 +50,13 @@ export const SIDE_BAR = [
     id: "manage-ground-price",
     key: "manage-ground-price",
     icon: "fa fa-user-plus",
-    text: "Quản lý khung giá mb"
+    text: "Quản lý khung giá mb",
   },
   {
     id: "manage-category",
     key: "manage-category",
     icon: "fa fa-user-plus",
-    text: "Quản lý hạng mục"
+    text: "Quản lý hạng mục",
   },
   {
     id: "manage-user",
@@ -80,3 +80,30 @@ export const SIDE_BAR = [
 
 export const PHONE_REGEX = /^[+|0][0-9]{9,15}$/;
 export const EMAIL_REGEX = /\S+@\S+\.\S+/;
+export const INIT_PROVINCE_OPTION = {
+  id: 3,
+  name: "province_id",
+  value: 3,
+  label: "Đà Nẵng",
+};
+
+export const INIT_DISTRICT_OPTION = {
+  id: 1,
+  name: "district_id",
+  value: 1,
+  label: "Hải Châu 1",
+};
+
+export const INIT_WARD_OPTION = {
+  id: 1,
+  name: "ward_id",
+  value: 1,
+  label: "Thạch thang",
+};
+
+export const INIT_AREA600_OPTION = {
+  id: 1,
+  name: "area600_id",
+  value: 1,
+  label: "Nội thị 1",
+};
