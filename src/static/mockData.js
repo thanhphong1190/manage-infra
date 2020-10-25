@@ -12,33 +12,65 @@ export const manageUserData = [
 
 export const CategoryData = [
   {
-    id: "123",
-    name: "Viba",
-    category_field: [
-      {
-        key: "quantity",
-        name: "Số lượng",
-      },
-      {
-        key: "height",
-        name: "Độ cao",
-      },
-    ],
+    id: "1",
+    parent_name: "Phòng máy",
+    category_name: "Phòng máy",
+    category_price: 1200000
   },
   {
-    id: "124",
-    name: "Phòng máy",
-    category_field: [
-      {
-        key: "device_room",
-        name: "Phòng máy",
-      },
-      {
-        key: "device_room_place",
-        name: "Vị trí đặt phòng máy",
-      },
-    ],
+    id: "2",
+    parent_name: "Phòng máy",
+    category_name: "Vị trí đặt MPĐ",
+    category_price: 200000
   },
+  {
+    id: "3",
+    parent_name: "Cột ăngten",
+    category_name: "Anten trên mái",
+    category_price: 1821821
+  },
+  {
+    id: "4",
+    parent_name: "Cột ăngten",
+    category_name: "Anten dưới đất",
+    category_price: 1500000
+  },
+  {
+    id: "5",
+    parent_name: "Viba",
+    category_name: "Viba",
+    category_price: 1818182
+  },
+  {
+    id: "6",
+    parent_name: "HM Phụ trợ",
+    category_name: "Điều hòa",
+    category_price: 1000000
+  },
+  {
+    id: "7",
+    parent_name: "HM Phụ trợ",
+    category_name: "PCCC/Bảo vệ",
+    category_price: 200000
+  },
+  {
+    id: "8",
+    parent_name: "HM Phụ trợ",
+    category_name: "Cảnh báo ngoài",
+    category_price: 100000
+  },
+  {
+    id: "9",
+    parent_name: "HM Phụ trợ",
+    category_name: "Ổn áp",
+    category_price: 200000
+  },
+  {
+    id: "10",
+    parent_name: "HM Phụ trợ",
+    category_name: "HT tiếp đất",
+    category_price: 200000
+  }
 ];
 
 export const ManagePartnerData = [
@@ -118,5 +150,70 @@ export const Area600Data = [
     name: "area600_id",
     value: 2,
     label: "Nông thôn",
+  },
+];
+
+export const ManageContractData = [
+  {
+    id: 1,
+    contract_type: "Mobifone thuê",
+    partner_id: "CMC miền trung",
+    contract_id: "ABC1234",
+    time_range: "12/12/2020-12/12/2025",
+    payment_period: "4",
+    time_alert: "7"
+  },
+  {
+    id: 1,
+    contract_type: "Mobifone thuê",
+    partner_id: "FPT miền trung",
+    contract_id: "CDE1234",
+    time_range: "12/12/2020-12/12/2025",
+    payment_period: "12",
+    time_alert: "14"
+  }
+];
+export const PartnerData = [
+  {
+    id: 1,
+    name: "partner_name",
+    value: 1,
+    label: "CMC miền trung",
+  },
+  {
+    id: 2,
+    name: "partner_name",
+    value: 2,
+    label: "FPT miền trung",
+  },
+];
+
+export const PaymentPeriodData = [
+  {
+    id: 1,
+    name: "payment_period",
+    value: 4,
+    label: "4",
+  },
+  {
+    id: 1,
+    name: "payment_period",
+    value: 12,
+    label: "12",
+  },
+];
+
+export const TimeAlertData = [
+  {
+    id: 1,
+    name: "time_alert",
+    value: 7,
+    label: "7",
+  },
+  {
+    id: 1,
+    name: "time_alert",
+    value: 14,
+    label: "14",
   },
 ];

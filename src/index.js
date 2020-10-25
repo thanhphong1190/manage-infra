@@ -30,6 +30,8 @@ ReactDOM.render(
             <ProtectedRoute path="/manage-contract" component={Router} />
             <ProtectedRoute path="/manage-ground-price" component={Router} />
             <ProtectedRoute path="/manage-station" component={Router} />
+            <ProtectedRoute path="/manage-payment" component={Router} />
+            <ProtectedRoute path="/manage-stats" component={Router} />
           </Switch>
           <ReduxToastr
             timeOut={3000}

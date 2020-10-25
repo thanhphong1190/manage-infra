@@ -41,22 +41,29 @@ class Category extends React.Component {
         formatExtraData: { page },
       },
       {
-        dataField: "name",
-        text: "Tên",
+        dataField: "parent_name",
+        text: "Mục cha",
         classes: "text-nowrap",
       },
       {
-        text: "Thuộc tính",
+        dataField: "category_name",
+        text: "Tên hạng mục",
+        classes: "text-nowrap",
+      },
+      {
+        dataField: "category_price",
+        text: "Đơn giá",
+        classes: "text-nowrap",
+      },
+      {
+        text: "Hoạt động",
         classes: "text-nowrap",
         dataField: "category_field",
         formatter: (cell, row) => {
           return (
             <div className="d-flex">
-              {
-                cell && cell.length > 0 && cell.map(item => {
-                return (<Badge color="info" pill className="px-3 py-2 mr-2">{item.name}</Badge>)
-                })
-              }
+              <Button color="primary" className="mr-1">Sửa</Button>
+              <Button>Xóa</Button>
             </div>
           );
         },

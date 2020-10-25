@@ -12,6 +12,8 @@ import ManageContract from "./manage-contract";
 import Category from "./manage-category";
 import ManageGroundPrice from "./manage-ground-price";
 import ManageStation from './manage-station';
+import ManagePayment from './manage-payment';
+import ManageStatistic from './manage-statistic';
 
 const AppRouter = (props) => (
   <div className="body-container d-flex">
@@ -29,6 +31,8 @@ const AppRouter = (props) => (
         <Route path="/manage-contract" component={ManageContract} />
         <Route path="/manage-ground-price" component={ManageGroundPrice} />
         <Route path="/manage-station" component={ManageStation} />
+        <Route path="/manage-payment" component={ManagePayment} />
+        <Route path="/manage-stats" component={ManageStatistic} />
       </Switch>
     </div>
   </div>

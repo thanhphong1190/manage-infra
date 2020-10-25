@@ -1,23 +1,16 @@
 import React from "react";
-import { Row, Col, Container, Button, FormGroup } from "reactstrap";
-import Select from "react-select"
+import { Row, Col, Container, Button } from "reactstrap";
 import MyTable from "../../components/MyTable";
 import { noFormatter } from "../../helpers/formatter";
-import {
-  PAGE_SIZE,
-  INIT_PROVINCE_OPTION
-} from "../../app-constants";
+import { PAGE_SIZE } from "../../app-constants";
 import ConfirmModal from "../../components/Modal/Confirm";
-import {
-  ManageContractData,
-  ProvinceData,
-} from "../../static/mockData";
+import { ManageAppendixData } from "../../static/mockData";
 import SearchBar from "../../components/Form/SearchBar";
-import AddUpdateContractModal from "./add-update-contract/AddUpdateContractModal";
+import AddUpdatePartnerModal from "./update-appendix/UpdateAppendixModal";
 
-class ManageContract extends React.Component {
+class ManageAppendix extends React.Component {
   state = {
-    data: ManageContractData,
+    data: ManageAppendixData,
     search: "",
     page: 1,
     pageSize: PAGE_SIZE,
@@ -55,33 +48,18 @@ class ManageContract extends React.Component {
         formatExtraData: { page },
       },
       {
-        dataField: "contract_type",
-        text: "Loại hợp đồng",
+        dataField: "name",
+        text: "Tên",
         classes: "text-nowrap",
       },
       {
-        dataField: "partner_id",
-        text: "Đối tác",
+        dataField: "address",
+        text: "Địa chỉ",
         classes: "text-nowrap",
       },
       {
-        dataField: "contract_id",
-        text: "Mã hợp đồng",
-        classes: "text-nowrap",
-      },
-      {
-        dataField: "time_range",
-        text: "Hiệu lực hợp đồng",
-        classes: "text-nowrap",
-      },
-      {
-        dataField: "payment_period",
-        text: "Chu kì thanh toán",
-        classes: "text-nowrap",
-      },
-      {
-        dataField: "time_alert",
-        text: "Thời gian nhắc thanh toán",
+        dataField: "phone",
+        text: "Số điện thoại",
         classes: "text-nowrap",
       },
       {
@@ -120,17 +98,6 @@ class ManageContract extends React.Component {
               >
                 <i className="fa fa-trash-o"></i>
               </Button>
-              <Button
-                className="ml-1"
-                color={"primary"}
-                onClick={() =>
-                  this.setState({
-                    selectedId: row.id,
-                  })
-                }
-              >
-                Sửa phụ lục
-              </Button>
             </div>
           );
         },
@@ -142,7 +109,7 @@ class ManageContract extends React.Component {
           <Col md="12">
             <div className="d-flex align-items-center justify-content-between w-100 page-title">
               <h6>
-                <strong>Quản lý hợp đồng</strong>
+                <strong>Quản lý đối tác</strong>
               </h6>
               <Button
                 color="primary"
@@ -154,28 +121,15 @@ class ManageContract extends React.Component {
                   })
                 }
               >
-                <i className="fa fa-plus-circle" aria-hidden="true"></i> Tạo hợp
-                đồng
+                <i className="fa fa-plus-circle" aria-hidden="true"></i> Tạo
+                đối tác
               </Button>
             </div>
           </Col>
         </Row>
         <Row className="d-flex justify-content-between">
           <Col md="12" className="pt-3">
-            {/* <SearchBar onSearch={this.onSearch} /> */}
-            <Row>
-              <Col md="2" sm="6" xs="12">
-                <FormGroup>
-                  <Select
-                    value={INIT_PROVINCE_OPTION}
-                    onChange={this.handleSelectChange}
-                    options={ProvinceData}
-                    isSearchable={false}
-                    placeholder="Chọn tỉnh/thành"
-                  />
-                </FormGroup>
-              </Col>
-            </Row>
+            <SearchBar onSearch={this.onSearch} />
             <MyTable
               columns={columns}
               data={this.state.data}
@@ -186,7 +140,7 @@ class ManageContract extends React.Component {
             />
           </Col>
         </Row>
-        <AddUpdateContractModal
+        <AddUpdatePartnerModal
           toggle={() =>
             this.setState({
               isShowAddUpdateModal: !this.state.isShowAddUpdateModal,
@@ -245,4 +199,4 @@ class ManageContract extends React.Component {
   componentDidMount = async () => {};
 }
 
-export default ManageContract;
+export default ManageAppendix;

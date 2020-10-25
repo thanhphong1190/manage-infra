@@ -27,6 +27,13 @@ export const TIME_PERIOD = [
   },
 ];
 
+export const DATE_TIME_FORMAT = {
+  DDMMYYYY: "DD-MM-YYYY",
+  DDMMYYYYHHmmss: "DD-MM-YYYY HH:mm:ss",
+  YYYYMMDD: "YYYY-MM-DD", // use for submitting data
+  YYYYMM: "YYYY-MM",
+};
+
 export const SIDE_BAR = [
   {
     id: "home",
@@ -41,21 +48,42 @@ export const SIDE_BAR = [
     text: "Quản lý hợp đồng",
   },
   {
-    id: "manage-partner",
-    key: "manage-partner",
-    icon: "fa fa-user",
-    text: "Quản lý đối tác",
+    id: "manage-payment",
+    key: "manage-payment",
+    icon: "fa fa-money",
+    text: "Quản lý thanh toán",
   },
+  {
+    id: "manage-stats",
+    key: "manage-stats",
+    icon: "fa fa-list-alt",
+    text: "Thống kê",
+    // childrens: [
+    //   {
+    //     id: "contract-stats",
+    //     key: "contract-stats",
+    //     icon: "fa fa-file",
+    //     text: "Thống kê hợp đồng",
+    //     permission: "payment_list",
+    //   }
+    // ],
+  },
+  // {
+  //   id: "manage-partner",
+  //   key: "manage-partner",
+  //   icon: "fa fa-user",
+  //   text: "Quản lý đối tác",
+  // },
   {
     id: "manage-ground-price",
     key: "manage-ground-price",
-    icon: "fa fa-user-plus",
+    icon: "fa fa-handshake-o",
     text: "Quản lý khung giá mb",
   },
   {
     id: "manage-category",
     key: "manage-category",
-    icon: "fa fa-user-plus",
+    icon: "fa fa-tasks",
     text: "Quản lý hạng mục",
   },
   {
@@ -64,12 +92,12 @@ export const SIDE_BAR = [
     icon: "fa fa-user-plus",
     text: "Quản lý người dùng",
   },
-  {
-    id: "manage-station",
-    key: "manage-station",
-    icon: "fa fa-user-plus",
-    text: "Quản lý trạm",
-  },
+  // {
+  //   id: "manage-station",
+  //   key: "manage-station",
+  //   icon: "fa fa-map-marker",
+  //   text: "Quản lý trạm",
+  // },
   {
     id: "settings",
     key: "settings",
@@ -107,3 +135,24 @@ export const INIT_AREA600_OPTION = {
   value: 1,
   label: "Nội thị 1",
 };
+
+export const INIT_PARTNER_OPTION = {
+  id: 1,
+  name: "partner_name",
+  value: 1,
+  label: "CMC miền trung",
+}
+
+export const INIT_PAYMENT_PERIOD_OPTION = {
+  id: 1,
+  name: "payment_period",
+  value: 4,
+  label: "4",
+}
+
+export const INIT_TIMEAlERT_OPTION = {
+  id: 1,
+  name: "time_alert",
+  value: 7,
+  label: "7",
+}
